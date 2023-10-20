@@ -20,7 +20,7 @@
     <div class="tab-content pt-3">
         <div id="usersTab" class="tab-pane fade show active">
             <h3>List of Users</h3>
-            <table class="table table-striped pt-3">
+            <table class="table table-striped pt-3" id="listUsersTable">
                 <thead>
                   <tr>
                     <th scope="col">First name</th>
@@ -43,7 +43,7 @@
         </div>
         <div id="loginHistoryTab" class="tab-pane fade">
             <h3>Login History</h3>
-            <table class="table table-striped pt-3">
+            <table class="table table-striped pt-3" id="listUsersLoginTable">
                 <thead>
                   <tr>
                     <th scope="col" class="col col-3">Date/Time</th>
@@ -68,6 +68,9 @@
             e.preventDefault();
             $(this).tab('show');
           });
+
+          new DataTable('#listUsersTable');
+          new DataTable('#listUsersLoginTable');
         });
     </script>
     

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand navbar-dark bg-black text-light">
+<nav class="navbar navbar-expand navbar-dark bg-green text-light">
   <div class="container">
     <a href="/" class="navbar-brand">
       <i class="fas fa-syringe"></i>
@@ -9,6 +9,9 @@
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="/" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="/" class="nav-link">Patients</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
