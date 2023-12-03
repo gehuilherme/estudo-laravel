@@ -25,7 +25,14 @@
                 <td class="p-1 text-center">{{$i}}</td>
                 <td class="p-1 text-center">{{$i}}</td>
                 <td class="p-1 text-center">{{$i}}</td>
-                <td class="p-1 text-center"><i class="fas fa-pen"></i>  <i class="fas fa-trash"></i></i></td>
+                <td class="p-1 text-center">
+                    <a href="patients/edit/{{$i}}">
+                        <i class="fas fa-pen"></i>
+                    </a>
+                    <a href="edit/del/{{$i}}">
+                        <i class="fas fa-trash"></i>
+                    </a>
+                </td>
             </tr>
             @endfor
             
