@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PatientsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,18 +24,7 @@ Route::get('/login', function () {
 });
 
 // Patients
-Route::get('/patients', function () {
-    return view('patients.index');
-});
-Route::get('/patients/add', function () {
-    return view('patients.forms.addpatient');
-});
-Route::put('/patients/edit/{id}', function () {
-    return view('noway.index');
-});
-Route::delete('/administration/del/{id}', function ($id) {
-    return $id;
-});
+Route::get('/patients', PatientsController::class .'@index')->name('patients.index');
 
 // Administration
 Route::get('/administration', function () {

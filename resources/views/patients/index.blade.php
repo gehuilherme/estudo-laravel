@@ -10,6 +10,7 @@
     <table class="table table-striped pt-3" id="listPatientTable">
         <thead>
         <tr class="text-center">
+            <th scope="col" class="text-center">id</th>
             <th scope="col" class="text-center">Document</th>
             <th scope="col" class="text-center">First Name</th>
             <th scope="col" class="text-center">Last Name</th>
@@ -18,31 +19,37 @@
         </tr>
         </thead>
         <tbody>
-            {{-- @foreach ($names as $name) --}}
-            @for ($i = 0; $i < 999; $i++)
+            @foreach ($patients as $patient)
             <tr>
-                <td class="p-1 text-center">{{$i}}</td>
-                <td class="p-1 text-center">{{$i}}</td>
-                <td class="p-1 text-center">{{$i}}</td>
-                <td class="p-1 text-center">{{$i}}</td>
+                <td class="p-1 text-center">{{$patient->id}}</td>
+                <td class="p-1 text-center">{{$patient->document}}</td>
+                <td class="p-1 text-center">{{$patient->name}}</td>
+                <td class="p-1 text-center">{{$patient->lastname}}</td>
+                <td class="p-1 text-center">Not Implemented</td>
                 <td class="p-1 text-center">
-                    <a href="patients/edit/{{$i}}">
+                    <a href="patients/edit/{{$patient->id}}">
                         <i class="fas fa-pen"></i>
                     </a>
-                    <a href="edit/del/{{$i}}">
+                    <a href="edit/del/{{$patient->id}}">
                         <i class="fas fa-trash"></i>
                     </a>
                 </td>
-            </tr>
-            @endfor
-            
-            {{-- @endforeach --}}
+            </tr>            
+            @endforeach
         </tbody>
     </table>
 
 <script>
     $(document).ready(function() {
-      new DataTable('#listPatientTable');
+        new DataTable('#listPatientTable', {
+            columnDefs: [
+                {
+                    "targets": [0],
+                    "visible": false,
+                    "searchable": false
+                }
+            ]
+        });
     });
 </script>
 @endsection
