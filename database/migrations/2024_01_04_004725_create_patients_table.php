@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('patients', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('lastname');
             $table->string('document')->unique();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->enum('user_role', ['Administrator', 'Medic', 'Nurse'])->default('Nurse');
-            $table->rememberToken();
+            $table->boolean('smoker')->default(false);
+            $table->boolean('allergies')->default(false);
+            $table->boolean('diabetic')->default(false);
+            $table->boolean('high_pressure')->default(false);
+            $table->boolean('dsts')->default(false);
+            $table->longText('more_information')->nullable()->default(null);
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('patients');
     }
 };

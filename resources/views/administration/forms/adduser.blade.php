@@ -7,21 +7,25 @@
         <div class="row">
             <div class="mb-3 col-md">
                 <label for="nameInput" class="form-label">Name</label>
-                <input type="text" class="form-control" id="nameInput" placeholder="Type your Name">
+                <input type="text" class="form-control" id="nameInput" placeholder="Type user Name">
             </div>
             <div class="mb-3 col-md">
                 <label for="lastnameInput" class="form-label" >Last Name</label>
-                <input type="text" class="form-control" id="lastnameInput" placeholder="Type your Last Name">
+                <input type="text" class="form-control" id="lastnameInput" placeholder="Type user Last Name">
+            </div>
+            <div class="mb-3 col-md">
+                <label for="documentInput" class="form-label" >Document</label>
+                <input type="text" class="form-control" id="documentInput" placeholder="Type user document">
             </div>
         </div>
         <div class="row">
             <div class="mb-3 col-md">
                 <label for="emailInput" class="form-label">Email</label>
-                <input type="email" class="form-control" id="emailInput" placeholder="Type your Email">
+                <input type="email" class="form-control" id="emailInput" placeholder="Type user Email">
             </div>
             <div class="mb-3 col-md">
                 <label for="passwordInput" class="form-label">Password</label>
-                <input type="password" class="form-control" id="passwordInput"  placeholder="Type your Password">
+                <input type="password" class="form-control" id="passwordInput"  placeholder="Type user Password">
             </div>
         </div>
         <div class="row">

@@ -8,11 +8,15 @@
         <div class="row">
             <div class="mb-3 col-md">
                 <label for="nameInput" class="form-label">Name</label>
-                <input type="text" class="form-control" id="nameInput" placeholder="Type your Name">
+                <input type="text" class="form-control" id="nameInput" placeholder="Type patient Name">
             </div>
             <div class="mb-3 col-md">
                 <label for="lastnameInput" class="form-label" >Last Name</label>
-                <input type="text" class="form-control" id="lastnameInput" placeholder="Type your Last Name">
+                <input type="text" class="form-control" id="lastnameInput" placeholder="Type patient Last Name">
+            </div>
+            <div class="mb-3 col-md">
+                <label for="documentInput" class="form-label" >Document</label>
+                <input type="text" class="form-control" id="documentInput" placeholder="Type patient document">
             </div>
         </div>
         <div class="row">
